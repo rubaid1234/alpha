@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subdomain Takeover</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;display:flex;min-height:100vh;
+      align-items:center;justify-content:center;margin:0;background:#f6f8fb;color:#0b1220}
+    .box{padding:20px;border-radius:8px;border:1px solid #e3e7ee;background:#fff;max-width:520px}
+    code{background:#f1f5f9;padding:2px 6px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <div class="box" role="main" aria-live="polite">
+    <h1 style="margin:0 0 8px">Subdomain Takeover</h1>
+    <p style="margin:0 0 12px">This page indicates the hostname is currently a placeholder or unprovisioned resource.</p>
+    <p style="margin:0;font-size:0.95rem;color:#374151">Hostname: <code id="host">example.subdomain.com</code></p>
+    <script>
+      document.getElementById('host').textContent = location.hostname || 'example.subdomain.com';
+    </script>
+  </div>
+</body>
+</html>
